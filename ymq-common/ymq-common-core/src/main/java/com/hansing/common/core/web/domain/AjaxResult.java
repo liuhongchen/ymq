@@ -1,14 +1,14 @@
 package com.hansing.common.core.web.domain;
 
-import com.ruoyi.common.core.constant.HttpStatus;
-import com.ruoyi.common.core.utils.StringUtils;
+import com.hansing.common.core.constant.HttpStatus;
+import com.hansing.common.core.utils.StringUtils;
 
 import java.util.HashMap;
 
 /**
  * 操作消息提醒
  * 
- * @author ruoyi
+ * @author hansing
  */
 public class AjaxResult extends HashMap<String, Object>
 {

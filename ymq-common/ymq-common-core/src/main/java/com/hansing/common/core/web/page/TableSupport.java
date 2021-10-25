@@ -1,11 +1,11 @@
 package com.hansing.common.core.web.page;
 
-import com.ruoyi.common.core.utils.ServletUtils;
+import com.hansing.common.core.utils.ServletUtils;
 
 /**
  * 表格数据处理
  * 
- * @author ruoyi
+ * @author hansing
  */
 public class TableSupport
 {

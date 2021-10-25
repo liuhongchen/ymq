@@ -16,28 +16,30 @@ spring:
     nacos:
       discovery:
         # 服务注册地址
-        server-addr: localhost:8848
+        server-addr: 114.115.239.157:8848
         heart-beat-timeout: 600000
+        group: ymq
       config:
         # 配置中心地址
-        server-addr: localhost:8848
+        server-addr: 114.115.239.157:8848
         # 配置文件格式
         file-extension: yml
         # 共享配置
         shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         config-long-poll-timeout: 600000
-    sentinel:
-      # 取消控制台懒加载
-      eager: true
-      transport:
-        # 控制台地址
-        dashboard: 127.0.0.1:8718
-      # nacos配置持久化
-      datasource:
-        ds1:
-          nacos:
-            server-addr: localhost:8848
-            dataId: sentinel-hansing-gateway
-            groupId: DEFAULT_GROUP
-            data-type: json
-            rule-type: flow
+        group: ymq
+#    sentinel:
+#      # 取消控制台懒加载
+#      eager: true
+#      transport:
+#        # 控制台地址
+#        dashboard: 127.0.0.1:8718
+#      # nacos配置持久化
+#      datasource:
+#        ds1:
+#          nacos:
+#            server-addr: 114.115.239.157:8848
+#            dataId: sentinel-hansing-gateway
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: flow

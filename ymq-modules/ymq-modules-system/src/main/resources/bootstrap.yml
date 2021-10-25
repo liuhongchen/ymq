@@ -14,11 +14,13 @@ spring:
     nacos:
       discovery:
         # 服务注册地址
-        server-addr: localhost:8848
+        server-addr: 114.115.239.157:8848
+        group: ymq
       config:
         # 配置中心地址
-        server-addr: localhost:8848
+        server-addr: 114.115.239.157:8848
         # 配置文件格式
         file-extension: yml
         # 共享配置
         shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        group: ymq

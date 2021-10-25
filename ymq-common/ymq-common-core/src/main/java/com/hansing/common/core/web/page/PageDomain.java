@@ -1,11 +1,11 @@
 package com.hansing.common.core.web.page;
 
-import com.ruoyi.common.core.utils.StringUtils;
+import com.hansing.common.core.utils.StringUtils;
 
 /**
  * 分页数据
  * 
- * @author ruoyi
+ * @author hansing
  */
 public class PageDomain
 {
