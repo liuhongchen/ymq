@@ -12,6 +12,7 @@
         <module>ymq-common</module>
         <module>ymq-auth</module>
         <module>ymq-gateway</module>
+        <module>ymq-modules</module>
     </modules>
 
     <properties>

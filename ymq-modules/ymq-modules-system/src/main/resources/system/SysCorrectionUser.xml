@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hansing.system.mapper.SysCorrectionUserMapper">
+<resultMap id="SysCorrectionUserResult" type="SysCorrectionUser">
+    <id     property="correctionUserId"       column="correctionuser_id"               />
+    <result property="cuserName"     column="user_name"                                />
+    <result property="email"        column="email"                                     />
+    <result property="phonenumber"  column="phonenumber"                               />
+    <result property="imei"  column="imei"                                             />
+    <result property="gender"       column="gender"                                    />
+    <result property="status"       column="status"                                    />
+    <result property="delFlag"      column="del_flag"                                  />
+    <result property="createBy"     column="create_by"                                 />
+    <result property="createTime"   column="create_time"                               />
+    <result property="updateBy"     column="update_by"                                 />
+    <result property="updateTime"   column="update_time"                               />
+    <result property="remark"       column="remark"                                    />
+    <association property="dept"    column="dept_id" javaType="SysDept" resultMap="deptResult" />
+</resultMap>
+
+    <resultMap id="deptResult" type="SysDept">
+        <id     property="deptId"   column="dept_id"     />
+        <result property="parentId" column="parent_id"   />
+        <result property="deptName" column="dept_name"   />
+        <result property="orderNum" column="order_num"   />
+        <result property="leader"   column="leader"      />
+        <result property="status"   column="dept_status" />
+    </resultMap>
+
+
+    <select id="selectCorrectionUserList" parameterType="SysCorrectionUser" resultMap="SysCorrectionUserResult">
+        select cu.correctionuser_id, cu.imei,cu.dept_id,  cu.user_name,  cu.phonenumber, cu.gender, cu.status, cu.del_flag, cu.create_by, cu.create_time, cu.remark, d.dept_name  from sys_correctionuser cu
+        left join sys_dept d on cu.dept_id = d.dept_id
+    </select>
+
+    <select id="selectCorrectionUserByDeptId" resultMap="SysCorrectionUserResult" parameterType="Long">
+        select cu.correctionuser_id, cu.dept_id, cu.imei, cu.user_name,  cu.phonenumber, cu.gender, cu.status, cu.del_flag, cu.create_by, cu.create_time, cu.remark, d.dept_name  from sys_correctionuser cu
+        left join sys_dept d on cu.dept_id = d.dept_id
+        where cu.dept_id = #{deptId}
+    </select>
+
+    <select id="selectCorrectionUserById" resultMap="SysCorrectionUserResult" >
+        select * from sys_correctionuser as cu
+        where cu.correctionuser_id = #{id} and cu.user_name = #{name}
+
+    </select>
+
+</mapper>
