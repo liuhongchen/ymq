@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+######################################################################
+# Build Tools
+
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+######################################################################
+# IDE
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.class
+
+### NetBeans ###
+nbproject/private/
+build/*
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+######################################################################
+# Others
+*.log
+*.xml.versionsBackup
+
+!*/build/*.java
+!*/build/*.html
+!*/build/*.xml
+=======
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+>>>>>>> 5a27db069807805ffab9edfc17242b2357986302
